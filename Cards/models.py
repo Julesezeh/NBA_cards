@@ -11,4 +11,10 @@ class Player(models.Model):
 
 
 class Stats(models.Model):
+    player = models.ForeignKey(Player,on_delete=models.CASCADE)
+    team = models.CharField(max_length=100)
     three_pt = models.FloatField()
+    ppg = models.FloatField()
+    rpg = models.FloatField()
+    apg = models.FloatField()
+    stlpg = models.FloatField()
